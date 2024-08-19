@@ -168,3 +168,20 @@ BEGIN
 END_DATA_BLOCK
 
 ```
+
+В процессе работы будет создана следующая таблица:
+
+```
+CREATE TABLE IF NOT EXISTS public.plc_flow_control
+(
+    time_stamp timestamp without time zone NOT NULL DEFAULT now(),
+    count integer,
+    flow1 real,
+    param3 real,
+    param4 double precision,
+    param5 double precision,
+    param6 boolean,
+    param7 boolean
+)
+
+```
