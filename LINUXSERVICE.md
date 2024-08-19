@@ -7,11 +7,7 @@
 - Скопировать файл S7Logger.service в /etc/systemd/system/
 - Исправвить S7Logger.service, указав путь до файла S7Logger.
 
-- Выполнить из под root:
-
-> systemctl daemon-reload
-
-либо:
+- Выполнить 
 
 > sudo systemctl daemon-reload
 
