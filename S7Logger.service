@@ -1,0 +1,9 @@
+[Unit]
+Description=S7Logger service app
+
+[Service]
+Type=notify
+ExecStart=/opt/S7Logger/S7Logger
+
+[Install]
+WantedBy=multi-user.target
