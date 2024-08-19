@@ -1,0 +1,19 @@
+﻿DATA_BLOCK "Data_block_1"
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+NON_RETAIN
+   STRUCT 
+      "counter" : DInt;
+      flow1 : Real;
+      param3 : Real;
+      Param4 : LReal;
+      param5 : LReal;
+      bool1 : Bool;
+      bool2 : Bool;
+   END_STRUCT;
+
+
+BEGIN
+
+END_DATA_BLOCK
+
