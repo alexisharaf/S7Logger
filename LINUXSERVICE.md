@@ -17,17 +17,17 @@
 
 проверить
 
-> sudo systemctl status fastdatarecorder.service
+> sudo systemctl status S7Logger.service
 
 Должен показать что сервис найден, но не запущен.
 запсутить:
 
-> sudo systemctl start fastdatarecorder.service
+> sudo systemctl start S7Logger.service
 
 остановить:
 
-> sudo systemctl stop fastdatarecorder.service
+> sudo systemctl stop S7Logger.service
 
 Сделать запускаемым при запуске системы:
 
-> sudo systemctl enable fastdatarecorder.service  
+> sudo systemctl enable S7Logger.service  
