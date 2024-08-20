@@ -59,11 +59,10 @@ namespace S7Logger
         private void LoadTimer(IConfigurationRoot configuration)
         {
 
+            //TODO: сделать проверки
+
             timer = new TimerType();
             var timersection = configuration.GetSection("Timer");
-
-
-            //timer = JsonSerializer.Deserialize<TimerType>(timersection);
 
             timer.hour = timersection.GetValue<int>("hour");
             timer.minute = timersection.GetValue<int>("minute");
@@ -76,18 +75,22 @@ namespace S7Logger
 
         private void LoadPlc(IConfigurationRoot configuration)
         {
+            //TODO: сделать проверки
+
             plc = new PlcType();
 
             var plcsection = configuration.GetSection("Plc");
 
             plc.plc_name = plcsection.GetValue<string>("plc_name");
-            plc.plc_ip = plcsection.GetValue<string>("plc_ip");
+            plc.plc_ip = plcsection.GetValue<string>("plc_ip");                 //Сделать проверку на правильность адреса.
             plc.plc_rack = plcsection.GetValue<int>("plc_rack");
             plc.plc_slot = plcsection.GetValue<int>("plc_slot");
         }
 
         private void LoadParameters(IConfigurationRoot configuration)
         {
+            //TODO: сделать проверки
+
             paramList = new List<ParameterType>();
 
             var paramssection = configuration.GetSection("Parameters");
@@ -111,6 +114,8 @@ namespace S7Logger
 
         private void initDbTable()
         {
+            //TODO: сделать проверки
+
             NpgsqlConnection connection = new NpgsqlConnection(databaseConnectionString);
 
             connection.Open();
